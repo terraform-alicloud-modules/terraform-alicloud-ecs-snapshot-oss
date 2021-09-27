@@ -45,3 +45,15 @@ variable "acl" {
   type        = string
   default     = "public-read"
 }
+
+variable "tags_created" {
+  description = "tags_created of tags to assign to the snapshot."
+  type        = string
+  default     = "TF"
+}
+
+variable "tags_for" {
+  description = "tags_for of tags to assign to the snapshot."
+  type        = string
+  default     = "Acceptance-test"
+}
