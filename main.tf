@@ -5,8 +5,8 @@ resource "alicloud_ecs_snapshot" "default" {
   retention_days = var.retention_days
   description    = var.description
   tags           = {
-    Created = var.tags_created
-    For     = var.tags_for
+    Created = var.ecs_snapshot_tags["created"]
+    For     = var.ecs_snapshot_tags["for"]
   }
 }
 

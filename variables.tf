@@ -46,14 +46,12 @@ variable "acl" {
   default     = "public-read"
 }
 
-variable "tags_created" {
-  description = "tags_created of tags to assign to the snapshot."
-  type        = string
-  default     = "TF"
+variable "ecs_snapshot_tags" {
+  description = "A mapping of tags to assign to the snapshot."
+  type        = map(string)
+  default     = {
+    created   = "TF"
+    for       = "Acceptance-test"
+  }
 }
 
-variable "tags_for" {
-  description = "tags_for of tags to assign to the snapshot."
-  type        = string
-  default     = "Acceptance-test"
-}
